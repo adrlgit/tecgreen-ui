@@ -1,0 +1,40 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h1>Reservas</h1>
+  </div>
+</div>
+
+<form>
+  <div class="ui-g">
+    <div class="ui-g-8 ui-sm-12 ui-fluid">
+      <label>Cliente</label>
+      <p-dropdown id="Cliente" name="cliente" [autoWidth]="false" placeholder="Selecione...." [options]="clientes" optionLabel="nome"
+        [(ngModel)]="venda.cliente" required>
+      </p-dropdown>
+    </div>
+    <div class="ui-g-4 ui-sm-12 ui-fluid">
+      <label>Valor da diária</label>
+      <input pInputText id="diaria" name="diaria" currencyMask [options]="{prefix: '', thousands: '.', decimal: ',', allowNegative: false}"
+        [(ngModel)]="venda.diaria" required/>
+    </div>
+    <div class="ui-g-12">
+      <p-panel header="Cadastro">
+        <div class="ui-g">
+          <div class="ui-g-8 ui-sm-12 ui-fluid">
+            <label>Reserva</label>
+              <p-dropdown id="" name="produto" [autoWidth]="false" placeholder="Selecione..."></p-dropdown>
+          </div>
+          <div class="ui-g-3 ui-sm-10 ui-fluid">
+            <label>Quantidade Quartos</label>
+            <input pInputText type="number" id="quantidade" name="quantidade" [(ngModel)]="venda.item" />
+          </div>
+          <div class="ui-g-1 ui-sm-2  ui-fluid">
+            <br/>
+            <button pButton type="button" icon="pi pi-plus"
+            (click)="incluirItem()"></button>
+          </div>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+</form>

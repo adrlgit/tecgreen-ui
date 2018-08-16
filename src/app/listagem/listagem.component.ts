@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { VendasService } from '../vendas/vendas.service';
+
 @Component({
   selector: 'app-listagem',
   templateUrl: './listagem.component.html',
@@ -9,7 +11,7 @@ export class ListagemComponent implements OnInit {
 
 vendas: Array<any>;
 
-  constructor() { }
+  constructor(private vendasService: VendasService) { }
 
   ngOnInit() {
   }

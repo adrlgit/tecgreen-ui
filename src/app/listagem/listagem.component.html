@@ -1,20 +1,22 @@
+<!--Listagem dos Dados-->
 <div class="ui-g">
   <div class="ui-g-12">
     <p-table [value]="vendas">
       <ng-template pTemplate="header">
         <tr>
-          <th class="col-header-id">Código</th>
           <th>Cliente</th>
-          <th>Data cadastro</th>
-          <th>Cliente</th>
+          <th>Quarto</th>
+          <th>Data entrada</th>
+          <th>Data saida</th>
         </tr>
       </ng-template>
+      <!--Dados da tabela onde será impresso as informações | a variável venda -->
       <ng-template pTemplate="body" let-venda>
         <tr>
-          <td>{{ venda.id }}}</td>
           <td>{{ venda.cliente.nome }}}</td>
-          <td class="col-data">{{ venda.cadastro }}}</td>
-          <td class="col-numero">{{ venda.total }}}</td>
+          <td>{{ venda.quarto }}}</td>
+          <td>{{ venda.entrada }}}</td>
+          <td>{{ venda.saida }}}</td>
         </tr>
       </ng-template>
     </p-table>
