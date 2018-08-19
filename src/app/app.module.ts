@@ -18,6 +18,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { VendaCadastroComponent } from './venda-cadastro/venda-cadastro.component';
+import { HomeComponent } from './home/home.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { RecepcaoComponent } from './recepcao/recepcao.component';
 
 registerLocaleData(localePt);
 
@@ -26,7 +29,10 @@ registerLocaleData(localePt);
     AppComponent,
     NavbarComponent,
     ListagemComponent,
-    VendaCadastroComponent
+    VendaCadastroComponent,
+    HomeComponent,
+    UsuarioComponent,
+    RecepcaoComponent
   ],
   imports: [
     BrowserModule,
